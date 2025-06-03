@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="box UrunEkle-box">
+    <h1 >Ürün Ekle</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. 
+    </div>
+    {% endif %}
+    {% endwith %}
+<form method="POST" action="/urun_ekle">
+    <div class="field">
+        <label class="label">Ürün Adı</label>
+        <div class="control">
+            <input type="text" class="input" name="urun_ad" placeholder="Ürün adını giriniz">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Ürün Etiketi</label>
+        <div class="control">
+            <input type="text" class="input" name="urun_etiket" placeholder="Ürün Etiketini giriniz">
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Fiyat</label>
+        <div class="control">
+            <input type="text" class="input" name="urun_fiyat" placeholder="Ürün fiyatını giriniz">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Ürün İmg URL</label>
+        <div class="control">
+            <input type="text" class="input" name="urun_img"  placeholder="Örnek: elbise.jpg">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Ürün Türü</label>
+        <div class="control">
+            <input type="text" class="input" name="urun_tur" placeholder="Ürün çeşidini giriniz">
+        </div>
+    </div>
+    <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+            <button class="button_kaydet">Kaydet</button>
+        </p>
+    </div>
+</form>
+
+</div>
+{% endblock %}
+
+
+

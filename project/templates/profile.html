@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+
+  .orders-container {
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    background-color: #fff;
+  }
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .order-header > div {
+    font-weight: 600;
+    color: #555;
+  }
+  .order-status {
+    color: #0a74da;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+  table thead th {
+    background-color: #f7f9fc;
+    color: #444;
+    padding: 12px 8px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+  }
+  table tbody td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  .product-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+  }
+  .total-price {
+    text-align: right;
+    font-weight: 700;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #222;
+  }
+  .no-orders {
+    text-align: center;
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 40px;
+  }
+</style>
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="account-page">
+  <div class="sidebar">
+    <ul>
+      <li><a href="#" onclick="showOrders(event)"><i class="fa fa-box"></i> Siparişlerim</a></li>
+
+
+
+        <li><a href="#"><i class="fa fa-user"></i> Profilim</a></li>
+        <li><a href="#"><i class="fa fa-address-book"></i> Adres Defteri</a></li>
+        <li><a href="#"><i class="fa fa-envelope"></i> Email Değiştir</a></li>
+        <li><a href="#"><i class="fa fa-key"></i> Şifre Değiştir</a></li>
+        <li><a href="#"><i class="fa fa-bell"></i> Bildirim Ayarları</a></li>
+        <li><a href="#"><i class="fa fa-heart"></i> Favorilerim</a></li>
+        <li><a href="#"><i class="fa fa-tags"></i> Kuponlarım</a></li>
+        <li><a href="#"><i class="fa fa-question-circle"></i> SSS</a></li>
+        <li><a href="#"><i class="fa fa-phone"></i> İletişim</a></li>
+        <li><a href="#"><i class="fa fa-sign-out-alt"></i> Çıkış Yap</a></li>
+    </ul>
+</div>
+
+  <div class="content">
+    <h1>Hesabım</h1>
+    <p>Merhaba, <strong>{{ name }}</strong></p>
+    <div class="profile-section">
+      
+      <div class="order-tracking">
+        <input type="text" placeholder="Sipariş no">
+        <button>Sipariş detaylarını incele</button>
+      </div>
+    </div>
+    <div class="info-cards">
+      <div class="card">
+        <h3>ADRES DEFTERİ</h3>
+        <p>Varsayılan adresiniz: <br>Varsayılan bir adresiniz yok</p>
+      </div>
+      <div class="card">
+        <h3>PROFİLİM</h3>
+        <p>Kullanıcı bilgilerinizi görüntülemek veya güncellemek için <a href="#">buraya tıklayın</a>.</p>
+      </div>
+      <div class="card">
+        <h3>BİZE ULAŞIN</h3>
+        <p>
+          İletişim formunu doldurarak bize görüş, öneri ya da şikayetlerinizi paylaşmak isterseniz
+          <a href="#">ulaşabilirsiniz</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function showOrders(event) {
+  event.preventDefault();
+
+  fetch('/api/orders')
+    .then(response => {
+      if (!response.ok) throw new Error('Giriş yapmanız gerekiyor.');
+      return response.json();
+    })
+    .then(data => {
+      if (data.length === 0) {
+        document.querySelector('.content').innerHTML = '<h1>Siparişlerim</h1><p>Henüz siparişiniz yok.</p>';
+        return;
+      }
+
+      let html = `<h1>Siparişlerim</h1>`;
+      data.forEach(order => {
+        html += `
+          <div class="order-card">
+            <h3>Sipariş No: ${order.id} - Tarih: ${order.tarih}</h3>
+            <p>Durum: ${order.durum} | Kargo Takip No: ${order.kargo_takip_no ? order.kargo_takip_no : 'Yok'}</p>
+            <table>
+              <thead>
+                <tr><th>Ürün</th><th>Adet</th><th>Fiyat (₺)</th></tr>
+              </thead>
+              <tbody>
+        `;
+
+        order.urunler.forEach(item => {
+          html += `
+            <tr>
+              <td>
+                <img src="${item.image_url}" alt="${item.name}" style="width:50px; height:auto; vertical-align:middle; margin-right:10px;">
+                ${item.name}
+              </td>
+              <td>${item.adet}</td>
+              <td>${(item.price * item.adet).toFixed(2)}</td>
+            </tr>
+          `;
+        });
+
+        html += `
+              </tbody>
+            </table>
+            <p><strong>Toplam Fiyat: ${order.toplam_fiyat.toFixed(2)} ₺</strong></p>
+          </div>
+          <hr>
+        `;
+      });
+
+      document.querySelector('.content').innerHTML = html;
+    })
+    .catch(err => {
+      document.querySelector('.content').innerHTML = `<p style="color:red;">${err.message}</p>`;
+    });
+}
+
+</script>
+{% endblock %}

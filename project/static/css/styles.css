@@ -1,0 +1,781 @@
+ .hero-body{
+    background-color: #fdd7de; 
+    height: 100%;
+}
+/* chatbot css baslangiç*/
+#chatbox button {
+    background: #ff66aa;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  #chatbox input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+
+
+.message-user, .message-bani {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 5px 0;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+
+.message-user {
+  background-color: #f5a623; 
+  color: #4a2c00;
+  align-self: flex-end;
+  border-radius: 15px 15px 0 15px;
+  text-align: right;
+}
+
+
+.message-bani {
+  background-color: #add8e6;  
+  color: #003366;
+  align-self: flex-start;
+  border-radius: 15px 15px 15px 0;
+  text-align: left;
+}
+#chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  height: 320px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+/* chatbot css sonn*/
+.UrunEkle-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 30px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.UrunEkle-box h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4b6c9e;
+}
+
+.notification.is-danger {
+    background-color: #ffdddd;
+    color: #ff4d4d;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.control {
+    width: 100%;
+}
+
+.input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #4b6c9e;
+    outline: none;
+    background-color: #fff;
+}
+
+.button_kaydet {
+    background-color: #4b6c9e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    margin-left: 400px;
+}
+
+.button_kaydet:hover {
+    background-color: #3a578d;
+}
+
+@media (max-width: 768px) {
+    .UrunEkle-box {
+        width: 90%;
+        padding: 20px;
+    }
+    .input {
+        padding: 10px;
+    }
+    .button_kaydet {
+        width: 100%;
+    }
+}
+
+.announcement-container {
+    width: 100%;
+    background-color: #f1c395;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #announcement-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .announcement-item {
+    display: none;
+    padding: 0 20px;
+  }
+  
+  .announcement-item.show {
+    display: inline-block;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 20%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
+  
+.bosluk{
+    height: 50px;
+    background-color: #fdf2f4; 
+}
+
+.container{
+    background-color: #fdf2f4; 
+}
+.navbar{
+    background-color: #fdf2f4; 
+    border: 1px solid #ffdee4; 
+    
+
+}
+.navbar .container{
+    width: 80%;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #fdf2f4; 
+    
+}
+.navbar-end a{
+   
+    color: #d17a92;
+    text-decoration: none;
+    background-color: #fdd7de; 
+}
+.navbar-item{
+    border-radius: 15px;
+    background-color: #fdd7de; 
+    margin: 3px;
+   
+}
+.navbar-item:hover{
+    background-color: #fdf2f4  !important;
+    color: brown !important;
+  
+}
+/*      LOGO       */
+.logo-text{
+    background-color: #fdf2f4; 
+    font-size: 2.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400; 
+    color: #ff85a1;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    animation: gentleAppear 1s ease-out;
+}
+
+.logo-link{
+    text-decoration: none;
+    background-color: #fdf2f4; 
+}
+.logo-text span.v{
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 3.0rem;
+    color: #f4e9e9;
+    text-shadow: 0 0 5px rgba(255, 0, 102, 0.842); 
+    display: inline-block; 
+
+}
+.logo-text:hover{
+    color: #ffb3c6;
+    transform: scale(1.1);
+    background-color: #fdf2f4; 
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(255, 179, 198, 0.8),
+    0 0 12px rgba(255, 133, 161, 0.5);
+}
+.logo-text::before,
+.logo-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+
+.logo-text:hover::before {
+   
+    opacity: 0.4;
+    transform: scale(1.2);
+}
+
+.logo-text:hover::after {
+   
+    opacity: 0.3;
+    transform: scale(1.4);
+}
+
+
+@keyframes gentleAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn_sepete_ekle{
+    background-color: #d17a92;
+    border-radius: 15px;
+
+}
+.product-card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 100%; 
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-category {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.btn_sepete_ekle {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 100%; 
+}
+
+.btn_sepete_ekle:hover {
+    background: #cc7a00;
+    color: #f0f0f0;
+}
+.favorite-btn {
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+.favorite-btn.favorited i {
+    color: red;
+}
+
+
+.favorite-btn.active {
+    color: red;
+}
+
+.favorite-btn:focus {
+    outline: none;
+}
+
+/* ÇOK SATAN etiketi */
+.badge-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff9900;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Carousel içindeki kart düzenlemeleri */
+.carousel-inner .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-inner .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.carousel-img {
+    height: 200px; 
+    width: 100%;
+    object-fit: cover; 
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+.carousel-inner .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.carousel-inner .card-text {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+
+.carousel-inner .card-text.text-primary {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.btn_sepete_ekle {
+    background: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.btn_sepete_ekle:hover {
+    background: #cc7a00;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+}
+
+
+
+
+
+/*--------------------       index.html   navbar second          -----------*/
+
+.second_navbar.second_container{
+max-width: 1000px;
+margin: 0 auto;
+
+}
+.second_navbar{
+    background-color: #f1d1d1;
+    box-shadow: 0 0 15px 0 rgb(0,0 0,.10);
+    z-index: 1050; 
+    position: relative; 
+}
+.second_navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    text-align: left;
+    
+
+}
+.second_navbar li{
+    display: inline-block;
+}
+.second_navbar li:hover{
+    background-color: rgb(240, 227, 149);
+}
+.second_navbar a{
+    color: #444;
+    text-decoration: none;
+    display: block;
+    padding: .75em  1.75em;
+}
+
+.second_navbar a i{
+    font-size:0.9rem ;
+    color: #8b8a8d;
+    margin-left: 10px;
+    width: 20px;
+    height: 10px;
+}
+.second_navbar:hover{
+    background-color: #a9dddf;
+
+}
+.second_navbar .menu-sub{
+    position: absolute; 
+    background-color: rgb(240, 227, 149);
+    width: 100%;
+    display: none;
+    color: #ecebeb;
+    padding: 2em;
+    left: 0;
+}
+.second_navbar li:hover .menu-sub{
+    display: block;
+}
+.menu-sub li{
+    display: block;
+}  
+
+.menu-sub:hover{
+    background-color: rgb(240, 227, 149);
+    color:#444;
+}
+.menu-sub a{
+    padding: 0;
+    margin-bottom: .35em;
+}
+.menu-sub a:hover{
+    text-decoration: underline;
+}
+.munu-category{
+    margin: 2.5em 0 .5em;
+}
+.munu-category:first-of-type{
+    margin-top: 0;
+}
+.menu-col-1,.menu-col-2,.menu-col-3,.menu-col-4{
+    float: left;
+    color: #4158bd;
+  
+
+}
+.menu-col-1{
+    width: 25%;
+    color: #4158bd;
+}
+.menu-col-2{
+    width: 25%;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3px !important;
+    color: #5c5c5c;
+    margin-bottom: 60px;
+}
+
+/*-----  profile.Html--------*/
+.account-page {
+    display: flex;
+    font-family: 'Arial', sans-serif; 
+}
+
+.sidebar {
+    width: 20%;
+    background: linear-gradient(135deg, #ffffff, #ecebeb);
+    padding: 5px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    background: linear-gradient(135deg, #ededf7, #cdc6ef);
+    color: rgb(15, 19, 63);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #fae7e7);
+}
+
+  b
+  .content h1 {
+    font-size: 24px;
+    color: #6c63ff;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-section img {
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-section .order-tracking {
+    margin-left: auto;
+  }
+  
+  .order-tracking input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .order-tracking button {
+    padding: 8px 15px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .order-tracking button:hover {
+    background-color: #5548d1;
+  }
+  
+  .info-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    color: #6c63ff;
+  }
+  
+  .card a {
+    color: #6c63ff;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+
+
+  .footer {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #007bff;
+  }
+  
+  .footer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-section form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .footer-section form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .footer-section form button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-section form input, 
+    .footer-section form button {
+      width: 50%;
+      margin-left: 150px;
+    }
+  
+    .footer-section form button {
+      margin-top: 10px; /* Butonun input'tan aşağıda durması için */
+    }
+  }
+  

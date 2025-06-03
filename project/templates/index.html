@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% endblock %}
+{% block content %}
+<nav class="second_navbar">
+    <div class="second_container">
+        <ul class="menu-main">
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Yenidoğan') }}">Yenidoğan <br> <i> 🌸🌸</i></a>
+
+
+                <div class="menu-sub">
+                    <div class="menu-col-1">
+                    <h3 class="menu-category"> Dış Giyim</h3>
+                    <ul>
+                    <li><a href="">Ceket</a></li>
+                    <li><a href="{{ url_for('auth.urunler', kategori='Astronot Tulum') }}">Astronot Tulum</a></li>
+                    <li><a href="">Kaban</a></li>
+                  </ul>
+                 </div>
+
+                <div class="menu-col-1">
+                <h3 class="menu-category">Zıbın</h3>
+                <ul>
+                <li><a href="{{ url_for('auth.urunler', kategori='Zıbın') }}">Zıbın</a></li>
+               
+            </ul>
+         
+            <h3 class="menu-category">Giyim</h3>
+            <ul>
+                <li><a href="">Elbise</a></li>
+                <li><a href="">T-Shirt</a></li>
+                <li><a href="">Takım</a></li>
+                <li><a href="">Tulum</a></li>
+                <li><a href="">Etek</a></li>
+                <li><a href="">Pantolon</a></li>
+                
+            </ul>
+        </div>
+        <div class="menu-col-1">
+            <h3 class="menu-category">Ayakkabı</h3>
+            <ul>
+            <li><a href="">Günlük ayakkabı</a></li>
+            <li><a href="">Bot</a></li>
+            <li><a href="">Panduf</a></li>
+            <li><a href="">Terlik</a></li>
+            <li><a href="">Sandalet</a></li>
+        </ul>
+        <h3 class="menu-category">Aksesuar-İç Giyim</h3>
+        <ul>
+            <li><a href="">Pijama Takımı</a></li>
+            <li><a href="">çorap</a></li>
+            <li><a href="">şapka</a></li>
+           
+        </ul>
+    </div>
+ </div>
+</li>
+            
+
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız') }}">Kız Bebek <br><i >0-3 yaş</i></a>
+            <div class="menu-sub">
+                <div class="menu-col-2">
+               
+                <ul>
+                    <h3 class="menu-category"> Dış Giyim</h3>
+                    <ul>
+                    <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Ceket') }}">Ceket</a></li>
+                    <li><a href="{{ url_for('auth.urunler',cinsiyet='Kız',kategori='Astronot Tulum')}}">Astronot Tulum</a></li>
+                    <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Kaban') }}">Kaban</a></li>
+                </ul>
+                <h3 class="menu-category">Üst Giyim</h3>
+                <ul>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Elbise') }}">Elbise</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='T-Shirt') }}">T-Shirt</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Takım') }}">Takım</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Tulum') }}">Tulum</a></li>
+               
+            </ul>
+        </div>
+
+        <div class="menu-col-2">
+            <h3 class="menu-category">Alt Giyim</h3>
+            <ul>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Etek') }}">Etek</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Pantolon') }}">Pantolon</a></li>
+                
+            </ul>
+            <h3 class="menu-category">Ayakkabı</h3>
+            <ul>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Ayakkabı') }}">Günlük ayakkabı</a></li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Bot') }}">Bot</a></li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Panduf') }}">Panduf</a></li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Terlik') }}">Terlik</a></li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Sandalet') }}">Sandalet</a></li>
+        </ul>
+    </div>
+    <div class="menu-col-2">
+        <h3 class="menu-category">Aksesuar-İç Giyim</h3>
+        <ul>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Pijama Takımı') }}">Pijama Takımı</a></li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Kız',kategori='Aksesuar') }}">çorap-şapka</a></li>
+           
+        </ul>
+    
+</div>
+
+            </div>
+        </li>
+            <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek') }}">Erkek Bebek <br><i>0-3 yaş</i></a>
+                <div class="menu-sub">
+                    <div class="menu-col-2">
+                        <h3 class="menu-category"> Dış Giyim</h3>
+                        <ul>
+                        <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Ceket') }}">Ceket</a></li>
+                        <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Astronot Tulum') }}">Astronot Tulum</a></li>
+                        <li><a href="">Kaban</a></li>
+                    </ul>
+                    <h3 class="menu-category">Üst Giyim</h3>
+                    <ul>
+                       
+                        <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='T-Shirt') }}">T-Shirt</a></li>
+                        <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Takım') }}">Takım</a></li>
+                        <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Tulum') }}">Tulum</a></li>
+                       
+                </ul>
+            </div>
+    
+            <div class="menu-col-2">
+                <h3 class="menu-category">Alt Giyim</h3>
+                <ul>
+                
+                    <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Pantolon') }}">Pantolon</a></li>
+                    
+                </ul>
+                <h3 class="menu-category">Ayakkabı</h3>
+                <ul>
+                    <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Ayakkabı') }}">Günlük ayakkabı</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Bot') }}">Bot</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Panduf') }}">Panduf</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Terlik') }}">Terlik</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Sandalet') }}">Sandalet</a></li>
+            </ul>
+        </div>
+        <div class="menu-col-2">
+            <h3 class="menu-category">Aksesuar-İç Giyim</h3>
+            <ul>
+                <li><a href="">Pijama Takımı</a></li>
+                <li><a href="{{ url_for('auth.urunler', cinsiyet='Erkek',kategori='Aksesuar') }}">çorap-şapka</a></li>
+               
+            </ul>
+        
+    </div>
+    
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='images/carousel.png') }}" class="d-block w-100" alt="Third Slide">
+
+           
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/carousel2.png') }}" class="d-block w-100" alt="Third Slide">
+
+          
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/indirim.png') }}" class="d-block w-100" alt="Third Slide">
+
+            
+        </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+    </button>
+</div>
+
+{% endblock %}

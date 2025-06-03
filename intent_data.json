@@ -1,0 +1,10 @@
+[
+    {"intent": "siparis_iptal", "text": "Siparişimi iptal etmek istiyorum"},
+    {"intent": "siparis_iptal", "text": "İptal eder misiniz?"},
+    {"intent": "siparis_durumu", "text": "Siparişim nerede"},
+    {"intent": "siparis_durumu", "text": "Siparişimin durumu nedir?"},
+    {"intent": "kargo_takip", "text": "Kargo takip numaram nedir?"},
+    {"intent": "kargo_takip", "text": "Kargom nerede?"},
+    {"intent": "urun_bilgisi", "text": "Bu ürün kaç watt?"},
+    {"intent": "urun_bilgisi", "text": "Ürün açıklaması nedir?"}
+]
